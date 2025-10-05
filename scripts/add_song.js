@@ -2,7 +2,7 @@ addEventListener("DOMContentLoaded", function () {
   document.querySelector("#addBtn").addEventListener("click", addSong);
 });
 //add the song to the db.. it has to be asynch function because we are calling data outside our server
-
+const API_BASE = "https://backend-255-fa23-1-2xuv.onrender.com";
 async function addSong() {
   //create a song obj based on the form that the user fills out.
   const song = {
@@ -15,7 +15,7 @@ async function addSong() {
       ? document.querySelector("#genre").value.split(",")
       : [],
   };
-  const response = await fetch("http://localhost:3000/api/songs", {
+  const response = await fetch(`${API_BASE}/api/songs/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

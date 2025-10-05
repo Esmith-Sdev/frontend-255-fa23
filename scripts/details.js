@@ -4,8 +4,9 @@ addEventListener("DOMContentLoaded", async function () {
   const urlparam = new URLSearchParams(window.location.search);
   const songID = urlparam.get("id");
   console.log(songID);
+  const API_BASE = "https://backend-255-fa23-1-2xuv.onrender.com";
 
-  const response = await fetch("http://localhost:3000/api/songs/" + songID);
+  const response = await fetch(`${API_BASE}/api/songs/` + songID);
   const song = await response.json();
   console.log(song);
 
