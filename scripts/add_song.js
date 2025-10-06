@@ -10,7 +10,7 @@ async function addSong() {
     title: document.querySelector("#title").value,
     artist: document.querySelector("#artist").value,
     popularity: document.querySelector("#popularity").value,
-    realeaseDate: document.querySelector("#released").value,
+    releaseDate: document.querySelector("#released").value,
     genre: document.querySelector("#genre").value
       ? document.querySelector("#genre").value.split(",")
       : [],
