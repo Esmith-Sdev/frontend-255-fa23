@@ -30,7 +30,7 @@ async function updateSong() {
       ? document.querySelector("#genre").value.split(",")
       : [],
   };
-  const response = await fetch("`${API_BASE}/api/songs/`" + songID, {
+  const response = await fetch(`${API_BASE}/api/songs/` + songID, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
