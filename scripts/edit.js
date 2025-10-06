@@ -1,8 +1,9 @@
+const API_BASE = "https://backend-255-fa23-1-2xuv.onrender.com";
+
 addEventListener("DOMContentLoaded", async function () {
   document.querySelector("#updateBtn").addEventListener("click", updateSong);
   const urlparam = new URLSearchParams(window.location.search);
   const songID = urlparam.get("id");
-  const API_BASE = "https://backend-255-fa23-1-2xuv.onrender.com";
   const response = await fetch(`${API_BASE}/api/songs/` + songID);
   if (response.ok) {
     let song = await response.json();
