@@ -6,7 +6,6 @@ const API_BASE = "https://backend-255-fa23-1-2xuv.onrender.com";
 async function addSong() {
   //create a song obj based on the form that the user fills out.
   const song = {
-    _id: document.querySelector("#songID").value,
     title: document.querySelector("#title").value,
     artist: document.querySelector("#artist").value,
     popularity: document.querySelector("#popularity").value,
