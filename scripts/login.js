@@ -1,4 +1,5 @@
 let token;
+const API_BASE = "https://backend-255-fa23-1-2xuv.onrender.com";
 window.onload = function () {
   document.querySelector("#loginBtn").addEventListener("click", function () {
     const username = document.querySelector("#username").value;
@@ -12,7 +13,7 @@ async function login(username, password) {
     password,
   };
   //send the login post request to the backend
-  const response = await fetch("http://localhost:3000/api/auth/", {
+  const response = await fetch(`${API_BASE}/api/auth/`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
